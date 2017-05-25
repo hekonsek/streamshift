@@ -1,6 +1,0 @@
-- hosts: all
-  remote_user: root
-  tasks:
-
-  - name: Start OpenShift
-    shell: /tmp/openshift/openshift-origin-server-v1.4.1+3f9807a-linux-64bit/openshift start
