@@ -10,7 +10,7 @@
 
   - name: Download OpenShift Origin
     unarchive:
-      src: https://github.com/openshift/origin/releases/download/v1.4.1/openshift-origin-server-v1.4.1-3f9807a-linux-64bit.tar.gz
+      src: https://github.com/openshift/origin/releases/download/v1.5.1/openshift-origin-server-v1.5.1-7b451fc-linux-64bit.tar.gz
       dest: /usr/openshift
       remote_src: True
 
