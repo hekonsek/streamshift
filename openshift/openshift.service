@@ -2,7 +2,7 @@
 Description=OpenShift Daemon
 
 [Service]
-ExecStart=/usr/openshift/openshift-origin-server-v1.4.1+3f9807a-linux-64bit/openshift start
+ExecStart=/usr/openshift/openshift-origin-server-v1.4.1+3f9807a-linux-64bit/openshift start --etcd-dir=/var/openshift/etcd --volume-dir=/var/openshift/volumes
 Type=idle
 
 [Install]

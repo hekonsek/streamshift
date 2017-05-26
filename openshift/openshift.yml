@@ -5,6 +5,9 @@
   - name: Prepare OpenShift home
     file: path=/usr/openshift state=directory
 
+  - name: Prepare OpenShift runtime directory
+    file: path=/var/openshift state=directory
+
   - name: Download OpenShift Origin
     unarchive:
       src: https://github.com/openshift/origin/releases/download/v1.4.1/openshift-origin-server-v1.4.1-3f9807a-linux-64bit.tar.gz
