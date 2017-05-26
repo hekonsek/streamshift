@@ -1,3 +1,3 @@
 # StreamShift
 
-Simple DevOps stack for developing OpenShift data streaming applications.
+Simple OpenShift-based DevOps stack for developing data streaming applications.
