@@ -3,6 +3,7 @@ Description=OpenShift Daemon
 
 [Service]
 ExecStart=/usr/openshift/openshift-origin-server-v1.4.1+3f9807a-linux-64bit/openshift start
+Type=idle
 
 [Install]
 WantedBy=default.target
