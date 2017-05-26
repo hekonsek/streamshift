@@ -26,3 +26,10 @@
       state: started
       enabled: yes
       daemon_reload: yes
+
+  - name: Install OpenShift client
+    copy:
+      remote_src: True
+      src: /usr/openshift/openshift-origin-server-v1.5.1-7b451fc-linux-64bit/oc
+      dest: /usr/bin/oc
+      mode: 0555
