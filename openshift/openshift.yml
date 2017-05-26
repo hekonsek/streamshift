@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: localhost
   remote_user: root
   tasks:
 
