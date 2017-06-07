@@ -1,0 +1,27 @@
+- hosts: openshift
+  remote_user: root
+  tasks:
+
+  - name: Make sure OpenShift is not running
+    systemd:
+      name: openshift
+      state: stopped
+      enabled: no
+
+  - name: Uninstall OpenShift binaries
+    file: path=/usr/openshift state=absent
+
+  - name: Remove OpenShift runtime directory
+    file: path=/var/openshift state=absent
+
+  - name: Remove OpenShift service
+    file: path=/etc/systemd/system/openshift.service state=absent
+
+  - name: Remove OpenShift configuration
+    file: path=/openshift.local.config state=absent
+
+  - name: Remove OpenShift admin client cache
+    file: path=/root/.kube state=absent
+
+  - name: Remove OpenShift client
+    file: path=/usr/bin/oc state=absent

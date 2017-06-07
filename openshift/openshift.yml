@@ -27,10 +27,14 @@
       enabled: yes
       daemon_reload: yes
 
+  - name: Give OpenShift time to create configuration
+    pause:
+      seconds: 10
+
   - name: Make OpenShift configuration readable
     file:
       path: /openshift.local.config
-      mode: o=rw
+      mode: u=rwX,g=rwX,o=rwX
       recurse: yes
 
   - name: Install OpenShift client
