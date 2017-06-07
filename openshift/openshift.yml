@@ -27,6 +27,12 @@
       enabled: yes
       daemon_reload: yes
 
+  - name: Make OpenShift configuration readable
+    file:
+      path: /openshift.local.config
+      mode: o=rw
+      recurse: yes
+
   - name: Install OpenShift client
     copy:
       remote_src: True
