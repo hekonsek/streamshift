@@ -2,6 +2,22 @@
   remote_user: root
   tasks:
 
+  - name: Download Docker installer
+    get_url:
+      url: https://get.docker.com
+      dest: /tmp/get-docker
+      mode: 0555
+
+  - name: Install Docker
+    shell: /tmp/get-docker
+
+  - name: Make sure Docker is running
+    systemd:
+      name: docker
+      state: started
+      enabled: yes
+      daemon_reload: yes
+
   - name: Prepare OpenShift home
     file: path=/usr/openshift state=directory
 
