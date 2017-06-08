@@ -17,4 +17,4 @@ In order to execute given playbook download the project and use `ansible-playboo
 install OpenShift:
 
     git clone git@github.com:hekonsek/streamshift.git
-    ansible-playbook openshift/openshift.yml
+    ansible-playbook streamshift/openshift/openshift.yml
