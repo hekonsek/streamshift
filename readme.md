@@ -10,3 +10,11 @@ All playbooks have been tested against Fedora 25, but should work on any Systemd
 installed and running.
 - [OpenShift uninstall](https://github.com/hekonsek/streamshift/tree/master/openshift-uninstall) - removes OpenShift (including state and configuration)
 installed with the OpenShift playbook.
+
+## Executing playbooks
+
+In order to execute given playbook download the project and use `ansible-playbook` command. For example to
+install OpenShift:
+
+    git clone git@github.com:hekonsek/streamshift.git
+    ansible-playbook openshift/openshift.yml
