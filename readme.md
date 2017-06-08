@@ -21,7 +21,7 @@ In order to install OpenShift on target machines, execute the following command:
 Now try to log in into OpenShift using default admin credentials (username `admin` and password `admin`):
 
 ```
-$oc login
+$ oc login
 Authentication required for https://localhost:8443 (openshift)
 Username: admin
 Password: 
