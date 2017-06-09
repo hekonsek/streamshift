@@ -29,6 +29,7 @@
       src: https://github.com/openshift/origin/releases/download/v1.5.1/openshift-origin-server-v1.5.1-7b451fc-linux-64bit.tar.gz
       dest: /usr/openshift
       remote_src: True
+      creates: /usr/openshift/openshift-origin-server-v1.5.1-7b451fc-linux-64bit
 
   - name: Install service systemd descriptor
     copy:
