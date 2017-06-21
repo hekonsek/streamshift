@@ -1,6 +1,6 @@
 - include: openshift-login/openshift-login.yml
 
 - name: Provision ZooKeeper service
-  command: oc new-app hekonsek/streamshift-zookeeper:0.0.0-SNAPSHOT --name=zookeeper
+  command: oc new-app hekonsek/streamshift-zookeeper:0.0.0 --name=zookeeper
   register: result
   failed_when: "'--> Success' not in result.stdout and 'already exists' not in result.stderr"
