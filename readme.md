@@ -6,17 +6,18 @@ Simple OpenShift-based DevOps stack for developing data streaming applications.
 
 All playbooks have been tested against Fedora 25, but should work on any Systemd-friendly Linux box.
 
+- [Firewall](https://github.com/hekonsek/streamshift/tree/master/firewall) - ensures that firewall is installed and accepts only SSH traffic
 - [OpenShift](https://github.com/hekonsek/streamshift/tree/master/openshift) - ensures that Docker and OpenShift Origin 1.5.1 services are
 installed and running. Playbook also installs OpenShift `oc` client.
 - [OpenShift uninstall](https://github.com/hekonsek/streamshift/tree/master/openshift-uninstall) - removes OpenShift (including state and configuration)
 installed with the OpenShift playbook.
 
-## Executing playbooks
+## Installation
 
-In order to install OpenShift on target machines, execute the following command:
+In order to install StreamShift on target machines, execute the following command:
 
     git clone git@github.com:hekonsek/streamshift.git
-    ansible-playbook streamshift/openshift/openshift.yml
+    ansible-playbook streamshift/streamshift.yml
 
 Now try to log in into OpenShift using default admin credentials (username `admin` and password `admin`):
 

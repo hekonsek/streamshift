@@ -1,0 +1,6 @@
+- hosts: openshift
+  remote_user: root
+  tasks:
+
+  - include: firewall/firewall.yml
+  - include: openshift/openshift.yml

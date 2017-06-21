@@ -1,0 +1,8 @@
+- name: Install firewall
+  command: yum install -y firewalld creates=/usr/sbin/firewalld
+
+- name: Make sure firewall is running
+  systemd:
+    name: firewalld
+    state: started
+    enabled: yes
