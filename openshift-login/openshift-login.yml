@@ -1,0 +1,7 @@
+- name: Log into OpenShift
+  command: oc login localhost:8443 -u admin -p admin --insecure-skip-tls-verify=true
+
+- name: Ensure project exists
+  command: oc new-project streamshift
+  register: result
+  failed_when: "'Now using project' not in result.stdout and 'already exists' not in result.stderr"
