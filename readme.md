@@ -13,7 +13,8 @@ Currently all playbooks are dedicated to Fedora 25.
 `streamshift` project has been created.
 - [OpenShift uninstall](https://github.com/hekonsek/streamshift/tree/master/openshift-uninstall) - removes OpenShift (including state and configuration)
 installed with the OpenShift playbook.
-- [ZooKeeper](https://github.com/hekonsek/streamshift/tree/master/zookeeper) - ensures that ZooKeeper service is provisioned in OpenShift 
+- [ZooKeeper](https://github.com/hekonsek/streamshift/tree/master/zookeeper) - ensures that ZooKeeper service is provisioned in OpenShift
+- [Kafka](https://github.com/hekonsek/streamshift/tree/master/kafka) - ensures that Kafka service is provisioned in OpenShift 
 
 ## Installation
 

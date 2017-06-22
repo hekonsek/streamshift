@@ -1,0 +1,6 @@
+- include: openshift-login/openshift-login.yml
+
+- name: Provision Kafka service
+  command: oc new-app hekonsek/streamshift-kafka:0.0.0 --name=kafka
+  register: result
+  failed_when: "'--> Success' not in result.stdout and 'already exists' not in result.stderr"

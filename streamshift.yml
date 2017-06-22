@@ -5,3 +5,4 @@
   - include: firewall/firewall.yml
   - include: openshift/openshift.yml
   - include: zookeeper/zookeeper.yml
+  - include: kafka/kafka.yml

@@ -1,4 +1,4 @@
-FROM java
+FROM openjdk:8u131-jre
 
 MAINTAINER hekonsek@gmail.com
 
