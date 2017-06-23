@@ -1,0 +1,6 @@
+- include: openshift-login/openshift-login.yml
+
+- name: Provision Mongo service
+  command: oc new-app mongo
+  register: result
+  failed_when: "'--> Success' not in result.stdout and 'already exists' not in result.stderr"

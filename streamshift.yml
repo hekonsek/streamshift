@@ -6,3 +6,4 @@
   - include: openshift/openshift.yml
   - include: zookeeper/zookeeper.yml
   - include: kafka/kafka.yml
+  - include: mongo/mongo.yml

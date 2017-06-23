@@ -15,6 +15,7 @@ Currently all playbooks are dedicated to Fedora 25.
 installed with the OpenShift playbook.
 - [ZooKeeper](https://github.com/hekonsek/streamshift/tree/master/zookeeper) - ensures that ZooKeeper service is provisioned in OpenShift
 - [Kafka](https://github.com/hekonsek/streamshift/tree/master/kafka) - ensures that Kafka service is provisioned in OpenShift 
+- [MongoDB](https://github.com/hekonsek/streamshift/tree/master/mongo) - ensures that MongoDB service is provisioned in OpenShift
 
 ## Installation
 
