@@ -30,7 +30,7 @@ Keep in mind that Ansible EC2 module requires you to have Boto installed:
 
 You can specify AWS credentials either in Boto file (for example `~/.boto`) or using environment variables:
     
-AWS_ACCESS_KEY_ID='yourKeyId' AWS_SECRET_ACCESS_KEY='yourSecretKey' ansible-playbook aws.yml
+    AWS_ACCESS_KEY_ID='yourKeyId' AWS_SECRET_ACCESS_KEY='yourSecretKey' ansible-playbook aws.yml
 
 ## Installation
 
