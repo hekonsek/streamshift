@@ -1,0 +1,13 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+
+  - name: Provision Fedora 25
+    ec2:
+      instance_type: "{{ instance_type | default('t2.medium') }}"
+      region: eu-central-1
+      image: ami-bac603d5 # Fedora 25
+      wait: yes
+      instance_tags:
+              name: "{{ instance_name | default('streamShift') }}"
