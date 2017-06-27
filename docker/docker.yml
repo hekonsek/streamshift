@@ -13,3 +13,6 @@
     state: started
     enabled: yes
     daemon_reload: yes
+
+- name: Add user 'fedora' to group Docker
+  user: name=fedora groups=docker append=yes

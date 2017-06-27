@@ -1,5 +1,6 @@
 - hosts: openshift
-  remote_user: root
+  remote_user: fedora
+  become: true
   tasks:
 
   - include: firewall/firewall.yml
