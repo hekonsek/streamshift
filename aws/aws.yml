@@ -11,3 +11,4 @@
       wait: yes
       instance_tags:
               name: "{{ instance_name | default('streamShift') }}"
+      key_name: "{{ key_name }}"
