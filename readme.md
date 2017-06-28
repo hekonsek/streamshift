@@ -32,7 +32,8 @@ You can specify AWS credentials either in Boto file (for example `~/.boto`) or u
     
     AWS_ACCESS_KEY_ID='yourKeyId' AWS_SECRET_ACCESS_KEY='yourSecretKey' ansible-playbook aws.yml
 
-By default Ansible uploads default SSH public key to AWS and use it in created EC2 instance.
+By default Ansible uploads default SSH public key to AWS and use it in created EC2 instance. Also StreamShift creates EC2 security group with SSH port
+only exposed.
 
 ## Installation
 
