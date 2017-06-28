@@ -1,9 +1,12 @@
 - hosts: openshift
   remote_user: fedora
   become: true
+
+  roles:
+  - { role: hekonsek.fedora-firewall,0.5 }
+
   tasks:
 
-  - include: firewall/firewall.yml
   - include: openshift/openshift.yml
   - include: zookeeper/zookeeper.yml
   - include: kafka/kafka.yml
