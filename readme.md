@@ -30,14 +30,16 @@ Keep in mind that Ansible EC2 module requires you to have Boto installed:
 
 You can specify AWS credentials either in Boto file (for example `~/.boto`) or using environment variables:
     
-    AWS_ACCESS_KEY_ID='yourKeyId' AWS_SECRET_ACCESS_KEY='yourSecretKey' ansible-playbook aws.yml --extra-vars "key_name=yourKeyPairName"
+    AWS_ACCESS_KEY_ID='yourKeyId' AWS_SECRET_ACCESS_KEY='yourSecretKey' ansible-playbook aws.yml
+
+By default Ansible uploads default SSH public key to AWS and use it in created EC2 instance.
 
 ## Installation
 
 In order to install StreamShift execute the following command:
 
     git clone git@github.com:hekonsek/streamshift.git
-    AWS_ACCESS_KEY_ID='yourKeyId' AWS_SECRET_ACCESS_KEY='yourSecretKey' ansible-playbook aws.yml --extra-vars "key_name=yourKeyPairName"
+    AWS_ACCESS_KEY_ID='yourKeyId' AWS_SECRET_ACCESS_KEY='yourSecretKey' ansible-playbook aws.yml
     ansible-playbook streamshift/streamshift.yml
 
 Now ssh into provisioned EC2 Fedora instance and try to log in into OpenShift using default admin credentials

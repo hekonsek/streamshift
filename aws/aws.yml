@@ -3,6 +3,13 @@
   gather_facts: false
   tasks:
 
+  - name: Upload pubic SSH key
+    ec2_key:
+      name: "{{ key_name | default('streamShiftKey') }}"
+      key_material: "{{lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub')}}"
+      region: eu-central-1
+      state: present
+
   - name: Provision Fedora 25
     ec2:
       instance_type: "{{ instance_type | default('t2.medium') }}"
@@ -11,4 +18,4 @@
       wait: yes
       instance_tags:
               name: "{{ instance_name | default('streamShift') }}"
-      key_name: "{{ key_name }}"
+      key_name: "{{ key_name | default('streamShiftKey') }}"
