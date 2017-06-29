@@ -1,0 +1,5 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  roles:
+    - { role: hekonsek.fedora-ec2,0.2 }

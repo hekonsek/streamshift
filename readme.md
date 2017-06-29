@@ -17,24 +17,6 @@ installed with the OpenShift playbook.
 - [Kafka](https://github.com/hekonsek/streamshift/tree/master/kafka) - ensures that Kafka service is provisioned in OpenShift 
 - [MongoDB](https://github.com/hekonsek/streamshift/tree/master/mongo) - ensures that MongoDB service is provisioned in OpenShift
 
-### AWS EC2 playbook
-
-StreamShift also provides playbook which can be used to provision Fedora 25 on AWS EC2. 
-[AWS playbook](https://github.com/hekonsek/streamshift/tree/master/aws) ensures that Fedora 25 AWS EC2 node is provisioned and started.
-
-Default instance size is T2 medium (i.e. 4 GB of RAM) - in order to change it, override `instance_type` Ansible variable (for example `instance_type=t2.large`).
-
-Keep in mind that Ansible EC2 module requires you to have Boto installed: 
-
-    sudo pip install -U boto
-
-You can specify AWS credentials either in Boto file (for example `~/.boto`) or using environment variables:
-    
-    AWS_ACCESS_KEY_ID='yourKeyId' AWS_SECRET_ACCESS_KEY='yourSecretKey' ansible-playbook aws.yml
-
-By default Ansible uploads default SSH public key to AWS and use it in created EC2 instance. Also StreamShift creates EC2 security group with SSH port
-only exposed.
-
 ## Installation
 
 In order to install StreamShift execute the following command:
