@@ -1,5 +1,3 @@
-- include: ../docker/docker.yml
-
 - name: Prepare OpenShift home
   file: path=/usr/openshift state=directory
 

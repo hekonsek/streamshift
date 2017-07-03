@@ -4,6 +4,7 @@
 
   roles:
   - { role: hekonsek.fedora-firewall,0.5 }
+  - { role: hekonsek.fedora-docker,0.0 }
 
   tasks:
 
