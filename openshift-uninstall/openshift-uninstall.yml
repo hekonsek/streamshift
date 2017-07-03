@@ -8,6 +8,9 @@
       state: stopped
       enabled: no
 
+  - name: Umount volumes
+    shell: for i in `mount | grep /var/openshift | awk '{print $3}'`; do umount $i; done
+
   - name: Uninstall OpenShift binaries
     file: path=/usr/openshift state=absent
 
