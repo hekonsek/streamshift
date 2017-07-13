@@ -41,6 +41,13 @@
     dest: /usr/bin/oc
     mode: 0555
 
+- name: Install OpenShift admin client
+  copy:
+    remote_src: True
+    src: /usr/openshift/openshift-origin-server-v1.5.1-7b451fc-linux-64bit/oadm
+    dest: /usr/bin/oadm
+    mode: 0555
+
 - name: Log in as 'system:admin'
   command: /usr/bin/oc --config=/openshift.local.config/master/admin.kubeconfig login -u system:admin
 
@@ -49,3 +56,6 @@
 
 - name: Add cluster write rights to 'admin' user
   command: /usr/bin/oc --config=/openshift.local.config/master/admin.kubeconfig adm policy add-cluster-role-to-user cluster-admin admin
+
+- name: Add cluster write rights to 'admin' user
+  command: /usr/bin/oadm registry --service-account=registry  --config=/openshift.local.config/master/admin.kubeconfig

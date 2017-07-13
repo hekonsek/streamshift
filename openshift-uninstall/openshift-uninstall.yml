@@ -28,3 +28,6 @@
 
   - name: Remove OpenShift client
     file: path=/usr/bin/oc state=absent
+
+  - name: Remove OpenShift admin client
+    file: path=/usr/bin/oadm state=absent
