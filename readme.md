@@ -6,8 +6,6 @@ Simple OpenShift-based DevOps stack for developing data streaming applications o
 
 All playbooks are dedicated for Fedora 25.
 
-- [Firewall](https://github.com/hekonsek/streamshift/tree/master/firewall) - ensures that firewall is installed, running and accepts only SSH traffic
-- [Docker](https://github.com/hekonsek/streamshift/tree/master/docker) - ensures that Docker engine is installed, up and running 
 - [OpenShift](https://github.com/hekonsek/streamshift/tree/master/openshift) - ensures that OpenShift Origin 1.5.1 services are
 - [OpenShift login](https://github.com/hekonsek/streamshift/tree/master/openshift-login) - uses `oc` client to log into OpenShift. Also ensures that
 `streamshift` project has been created.
