@@ -59,3 +59,6 @@
 
 - name: Add cluster write rights to 'admin' user
   command: /usr/bin/oadm registry --service-account=registry  --config=/openshift.local.config/master/admin.kubeconfig
+
+- name: Provision integrated Docker registry
+  command: /usr/bin/oadm registry --service-account=registry --config=/openshift.local.config/master/admin.kubeconfig
