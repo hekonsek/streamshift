@@ -57,5 +57,22 @@
 - name: Add cluster write rights to 'admin' user
   command: /usr/bin/oc --config=/openshift.local.config/master/admin.kubeconfig adm policy add-cluster-role-to-user cluster-admin admin
 
+- include: openshift-login/openshift-login.yml
+
 - name: Provision integrated Docker registry
-  command: /usr/bin/oadm registry --service-account=registry --config=/openshift.local.config/master/admin.kubeconfig
+  command: /usr/bin/oadm registry --service-account=registry
+
+- name: Add hostnetwork role to service account
+  command: /usr/bin/oc adm policy add-scc-to-user hostnetwork system:serviceaccount:{{ project_name }}:router
+
+- name: Create router
+  command: /usr/bin/oc adm router
+
+- name: Expose Docker registry service
+  command: /usr/bin/oc expose service docker-registry
+
+- name: Add registry role to admin account
+  command: /usr/bin/oadm policy add-role-to-user system:registry admin
+
+- name: Add image-builder role to admin account
+  command: /usr/bin/oadm policy add-role-to-user system:image-builder admin

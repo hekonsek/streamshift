@@ -1,5 +1,6 @@
 - hosts: openshift
   remote_user: root
+  become: true
   tasks:
 
   - name: Make sure OpenShift is not running
@@ -31,3 +32,6 @@
 
   - name: Remove OpenShift admin client
     file: path=/usr/bin/oadm state=absent
+
+  - name: Remove OpenShift Docker containers
+    shell: docker rm -f $(docker ps | grep openshift/ | awk '{print $1}')

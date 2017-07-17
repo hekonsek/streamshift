@@ -1,6 +1,8 @@
 - hosts: openshift
   remote_user: fedora
   become: true
+  vars:
+    project_name: streamshift
 
   roles:
   - { role: hekonsek.fedora-firewall,0.5 }
