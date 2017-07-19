@@ -1,9 +1,0 @@
-[Unit]
-Description=OpenShift Daemon
-
-[Service]
-ExecStart=/usr/openshift/openshift-origin-server-v1.5.1-7b451fc-linux-64bit/openshift start --etcd-dir=/var/openshift/etcd --volume-dir=/var/openshift/volumes
-Type=idle
-
-[Install]
-WantedBy=default.target

@@ -6,7 +6,6 @@ Simple OpenShift-based DevOps stack for developing data streaming applications o
 
 All playbooks are dedicated for Fedora 25.
 
-- [OpenShift](https://github.com/hekonsek/streamshift/tree/master/openshift) - ensures that OpenShift Origin 1.5.1 services are
 - [OpenShift login](https://github.com/hekonsek/streamshift/tree/master/openshift-login) - uses `oc` client to log into OpenShift. Also ensures that
 `streamshift` project has been created.
 - [OpenShift uninstall](https://github.com/hekonsek/streamshift/tree/master/openshift-uninstall) - removes OpenShift (including state and configuration)
