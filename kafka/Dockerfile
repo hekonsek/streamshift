@@ -9,6 +9,8 @@ ADD kafka.sh /usr/kafka_2.12-0.10.2.1/
 
 RUN chgrp -R 0 /usr/kafka_2.12-0.10.2.1/ && chmod -R g+rwX /usr/kafka_2.12-0.10.2.1/
 
+VOLUME ["/kafka"]
+
 EXPOSE 9092
 
 ENTRYPOINT ["/usr/kafka_2.12-0.10.2.1/kafka.sh"]
